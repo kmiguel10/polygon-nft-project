@@ -3,6 +3,7 @@ pragma solidity ^0.8.7;
 
 import "../../contracts/tokens/nf-token.sol";
 import "../ownership/ownable.sol";
+import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 /**
  * @dev This is an example contract implementation of NFToken.

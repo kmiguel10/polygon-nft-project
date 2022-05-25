@@ -253,4 +253,6 @@ describe("nf-token", function () {
   //   // console.log(log);
   //   // console.log(sendsToSelfOnConstruct); No Receive event, 2x Transfer
   // });
+
+  //Write test for Chainlink VRF - or maybe not needed, and just need to add assertions to mint
 });
