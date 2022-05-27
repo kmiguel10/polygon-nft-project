@@ -28,7 +28,7 @@ contract NFTokenMetadataMock is NFTokenMetadata, Ownable {
         address _to,
         uint256 _tokenId,
         string calldata _uri
-    ) external onlyOwner {
+    ) external virtual onlyOwner {
         super._mint(_to, _tokenId);
         super._setTokenUri(_tokenId, _uri);
     }

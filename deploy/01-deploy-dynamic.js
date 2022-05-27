@@ -9,11 +9,11 @@ module.exports = async function (hre) {
 
   let ethUsdPriceFeedAddress;
 
-  //Rinkeby: 0x8A753747A1Fa494EC906cE90E9f37563A8AF630e
   if (chainId == 31337) {
     const ethUsdAggregator = await ethers.getContract("MockV3Aggregator");
     ethUsdPriceFeedAddress = ethUsdAggregator.address;
   } else {
+    //Rinkeby Testnet ETH/USD
     ethUsdPriceFeedAddress = "0x8A753747A1Fa494EC906cE90E9f37563A8AF630e";
   }
 
@@ -22,7 +22,14 @@ module.exports = async function (hre) {
   const highSvg = await fs.readFileSync("./img/happy.svg", {
     encoding: "utf8",
   });
-  args = [ethUsdPriceFeedAddress, lowSvg, highSvg, highValue];
+  args = [
+    ethUsdPriceFeedAddress,
+    lowSvg,
+    highSvg,
+    highValue,
+    "DynamicSVGNfts",
+    "SVG",
+  ];
   const dynamicSvgNft = await deploy("DynamicSvgNft", {
     from: deployer,
     args: args,
