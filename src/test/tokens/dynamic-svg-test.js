@@ -48,8 +48,4 @@ describe("Dynamic SVG NFT Unit Tests", function () {
       assert.equal(tokenURI, highTokenUri);
     });
   });
-
-  // probably want more tests checking the svg -> token URI conversion svgToImageURI
-  // More coverage of course
-  // Maybe some tokenURI oddities
 });
