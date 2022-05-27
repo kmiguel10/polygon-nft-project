@@ -43,7 +43,7 @@ Mock contracts showing basic contract usage are available in the [mocks](src/con
 - After installing the packages
 
 ```
-npm run test
+npx run test
 ```
 
 # Deployment to Rinkeby Testnet
